@@ -146,14 +146,6 @@ That's it — no install, no server, no build step required.
 
 ---
 
-## Screenshot
-
-**Home — cinematic hero & luxury navbar**
-
-![Master Chef home page — hero, navbar and signature dark-gold theme](Screenshots/banner.png)
-
----
-
 ## Customization Guide
 
 - **Replace the food video** — drop your file at `videos/food.mp4` (keep the same name/path).
