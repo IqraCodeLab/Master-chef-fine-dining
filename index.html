@@ -1,0 +1,657 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Master Chef — a high-end luxury fine-dining experience. Signature dishes, master chefs and cinematic culinary art.">
+  <title>Master Chef | Luxury Fine Dining</title>
+
+  <!-- Google Fonts: Playfair Display (serif) + Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- ============================================================
+       LUXURY FLOATING GLASS NAVIGATION
+       ============================================================ -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-master">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center w-100 navbar-shell">
+
+        <!-- Brand logo + text -->
+        <a class="navbar-brand" href="index.html">
+          <img src="images/logo.png" alt="Master Chef Logo">
+          <span class="brand-text">
+            <span class="brand-name">Master <span>Chef</span></span>
+            <span class="brand-tag">Fine Dining</span>
+          </span>
+        </a>
+
+        <!-- Mobile toggler -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+          aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+            <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="reservation.html">Reservation</a></li>
+          </ul>
+
+          <div class="nav-actions">
+            <button type="button" class="icon-btn" id="searchToggle" aria-label="Search">
+              <i class="bi bi-search"></i>
+            </button>
+            <a href="menu.html" class="icon-btn" aria-label="Cart">
+              <i class="bi bi-bag"></i>
+              <span class="cart-badge" id="cartCount" style="display:none;">0</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- Slide-down glass search bar -->
+  <div class="navbar-search" id="navbarSearch">
+    <div class="container">
+      <form class="row g-2" role="search">
+        <div class="col-10 col-sm-11">
+          <input type="search" class="form-control" placeholder="Search dishes, e.g. Biryani, Pizza..." aria-label="Search dishes">
+        </div>
+        <div class="col-2 col-sm-1">
+          <button type="submit" class="btn btn-brand w-100" aria-label="Search"><i class="bi bi-search"></i></button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       CINEMATIC HERO
+       ============================================================ -->
+  <header class="hero">
+    <div class="container">
+      <span class="hero-eyebrow">Est. Fine Dining Experience</span>
+      <h1>Experience <span class="highlight">Culinary</span><br>Perfection</h1>
+      <p class="lead">
+        A journey of fire, spice &amp; artistry — where every plate is plated like a masterpiece
+        and every bite tells a <strong>golden story</strong>.
+      </p>
+      <div class="hero-actions">
+        <a href="menu.html" class="btn btn-brand btn-lg"><i class="bi bi-star"></i> Explore Luxury Menu</a>
+        <a href="reservation.html" class="btn btn-ghost btn-lg"><i class="bi bi-calendar-heart"></i> Reserve Table</a>
+      </div>
+    </div>
+    <a href="#gallery" class="hero-scroll" aria-label="Scroll down"><i class="bi bi-chevron-double-down"></i></a>
+  </header>
+
+  <!-- ============================================================
+       PREMIUM FOOD GALLERY (Masonry + Lightbox)
+       ============================================================ -->
+  <section class="section-pad" id="gallery">
+    <div class="container">
+      <div class="section-heading text-center mb-5 reveal">
+        <span class="eyebrow">Our Gallery</span>
+        <h2>A Feast For The Eyes</h2>
+        <p>Signature plates captured in high definition — from fire-kissed grills to artisanal desserts.</p>
+        <div class="accent-underline"></div>
+      </div>
+
+      <!-- Gallery filter -->
+      <div class="filter-tabs gallery-filter reveal">
+        <button type="button" class="tab-btn active" data-filter="all">All</button>
+        <button type="button" class="tab-btn" data-filter="starters">Starters</button>
+        <button type="button" class="tab-btn" data-filter="main">Main Course</button>
+        <button type="button" class="tab-btn" data-filter="desserts">Desserts</button>
+        <button type="button" class="tab-btn" data-filter="drinks">Signature Drinks</button>
+      </div>
+
+      <!-- Masonry grid -->
+      <div class="gallery-grid">
+
+        <figure class="gallery-item reveal" data-category="main" data-title="Wood-Fired Pizza">
+          <img src="images/gallery-1.jpg" alt="Wood-Fired Pizza" loading="lazy">
+          <figcaption class="gallery-overlay">
+            <span class="zoom-icon"><i class="bi bi-zoom-in"></i></span>
+            <span class="gallery-tag">Main Course</span>
+            <h3 class="gallery-title">Wood-Fired Pizza</h3>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-item reveal" data-category="main" data-title="Royal Chicken Biryani">
+          <img src="images/gallery-2.jpg" alt="Royal Chicken Biryani" loading="lazy">
+          <figcaption class="gallery-overlay">
+            <span class="zoom-icon"><i class="bi bi-zoom-in"></i></span>
+            <span class="gallery-tag">Main Course</span>
+            <h3 class="gallery-title">Royal Chicken Biryani</h3>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-item reveal" data-category="starters" data-title="Sizzling Seekh Kebab">
+          <img src="images/gallery-3.jpg" alt="Sizzling Seekh Kebab" loading="lazy">
+          <figcaption class="gallery-overlay">
+            <span class="zoom-icon"><i class="bi bi-zoom-in"></i></span>
+            <span class="gallery-tag">Starters</span>
+            <h3 class="gallery-title">Sizzling Seekh Kebab</h3>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-item reveal" data-category="desserts" data-title="Chocolate Fudge Cake">
+          <img src="images/dessert-cake.jpg" alt="Chocolate Fudge Cake" loading="lazy">
+          <figcaption class="gallery-overlay">
+            <span class="zoom-icon"><i class="bi bi-zoom-in"></i></span>
+            <span class="gallery-tag">Desserts</span>
+            <h3 class="gallery-title">Chocolate Fudge Cake</h3>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-item reveal" data-category="starters" data-title="Golden Cheese Bites">
+          <img src="images/gallery-4.jpg" alt="Golden Cheese Bites" loading="lazy">
+          <figcaption class="gallery-overlay">
+            <span class="zoom-icon"><i class="bi bi-zoom-in"></i></span>
+            <span class="gallery-tag">Starters</span>
+            <h3 class="gallery-title">Golden Cheese Bites</h3>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-item reveal" data-category="drinks" data-title="Mango Lassi">
+          <img src="images/drink-lassi.jpg" alt="Mango Lassi" loading="lazy">
+          <figcaption class="gallery-overlay">
+            <span class="zoom-icon"><i class="bi bi-zoom-in"></i></span>
+            <span class="gallery-tag">Signature Drinks</span>
+            <h3 class="gallery-title">Mango Lassi</h3>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-item reveal" data-category="main" data-title="Charcoal BBQ Platter">
+          <img src="images/gallery-5.jpg" alt="Charcoal BBQ Platter" loading="lazy">
+          <figcaption class="gallery-overlay">
+            <span class="zoom-icon"><i class="bi bi-zoom-in"></i></span>
+            <span class="gallery-tag">Main Course</span>
+            <h3 class="gallery-title">Charcoal BBQ Platter</h3>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-item reveal" data-category="desserts" data-title="Seasonal Fruit Salad">
+          <img src="images/gallery-6.jpg" alt="Seasonal Fruit Salad" loading="lazy">
+          <figcaption class="gallery-overlay">
+            <span class="zoom-icon"><i class="bi bi-zoom-in"></i></span>
+            <span class="gallery-tag">Desserts</span>
+            <h3 class="gallery-title">Seasonal Fruit Salad</h3>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-item reveal" data-category="desserts" data-title="Gulab Jamun Duo">
+          <img src="images/gulab-jamun.jpg" alt="Gulab Jamun Duo" loading="lazy">
+          <figcaption class="gallery-overlay">
+            <span class="zoom-icon"><i class="bi bi-zoom-in"></i></span>
+            <span class="gallery-tag">Desserts</span>
+            <h3 class="gallery-title">Gulab Jamun Duo</h3>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-item reveal" data-category="starters" data-title="Butter Paratha">
+          <img src="images/gallery-7.jpg" alt="Butter Paratha" loading="lazy">
+          <figcaption class="gallery-overlay">
+            <span class="zoom-icon"><i class="bi bi-zoom-in"></i></span>
+            <span class="gallery-tag">Starters</span>
+            <h3 class="gallery-title">Butter Paratha</h3>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-item reveal" data-category="main" data-title="White Sauce Pasta">
+          <img src="images/gallery-8.jpg" alt="White Sauce Pasta" loading="lazy">
+          <figcaption class="gallery-overlay">
+            <span class="zoom-icon"><i class="bi bi-zoom-in"></i></span>
+            <span class="gallery-tag">Main Course</span>
+            <h3 class="gallery-title">White Sauce Pasta</h3>
+          </figcaption>
+        </figure>
+
+      </div>
+      <!-- /.gallery-grid -->
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CINEMATIC VIDEO SHOWCASE + ANIMATED PLATE
+       ============================================================ -->
+  <section class="video-banner" id="story">
+    <video id="bannerVideo" muted loop playsinline preload="metadata" poster="images/hero-bg.jpg" aria-hidden="true">
+      <source src="videos/food.mp4" type="video/mp4">
+    </video>
+
+    <!-- Mute / unmute toggle for the ambient background clip -->
+    <button type="button" class="mute-toggle" id="muteBtn" aria-label="Toggle background sound">
+      <i class="bi bi-volume-mute"></i>
+    </button>
+
+    <!-- Animated biryani / rice plate (CSS animation shown on play) -->
+    <div class="plate-stage" id="plateStage" aria-hidden="true">
+      <div class="steam steam-1"></div>
+      <div class="steam steam-2"></div>
+      <div class="steam steam-3"></div>
+      <div class="plate">
+        <div class="plate-rim"></div>
+        <div class="rice-mound">
+          <span class="grain" style="--i:0;"></span>
+          <span class="grain" style="--i:1;"></span>
+          <span class="grain" style="--i:2;"></span>
+          <span class="grain" style="--i:3;"></span>
+          <span class="grain" style="--i:4;"></span>
+          <span class="grain" style="--i:5;"></span>
+          <span class="grain" style="--i:6;"></span>
+          <span class="grain" style="--i:7;"></span>
+          <span class="grain" style="--i:8;"></span>
+          <span class="grain" style="--i:9;"></span>
+          <span class="grain" style="--i:10;"></span>
+          <span class="grain" style="--i:11;"></span>
+          <span class="grain" style="--i:12;"></span>
+          <span class="grain" style="--i:13;"></span>
+          <span class="grain" style="--i:14;"></span>
+          <span class="grain" style="--i:15;"></span>
+          <span class="grain" style="--i:16;"></span>
+          <span class="grain" style="--i:17;"></span>
+          <span class="grain" style="--i:18;"></span>
+          <span class="grain" style="--i:19;"></span>
+        </div>
+        <span class="chili"></span>
+        <span class="mint"></span>
+        <span class="mint mint-2"></span>
+      </div>
+    </div>
+
+    <div class="video-frame" aria-hidden="true"></div>
+
+    <div class="video-content" id="videoContent">
+      <div class="play-wrap">
+        <button class="play-btn" id="playBtn" aria-label="Play the kitchen video">
+          <span class="pulse-ring"></span>
+          <span class="pulse-ring pulse-ring-2"></span>
+          <i class="bi bi-play-fill" id="playIcon"></i>
+        </button>
+      </div>
+      <span class="eyebrow">Live From Our Kitchen</span>
+      <h2>Crafted With Passion, <em>Served Fresh</em></h2>
+      <p>Fresh off the stove — watch our signature dishes being plated in motion, steam still rising from every golden plate.</p>
+      <button type="button" class="btn btn-ghost" id="watchStoryBtn">Play The Video <i class="bi bi-play-circle"></i></button>
+      <small class="play-hint"><i class="bi bi-volume-up"></i> Plays right here with sound</small>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SIGNATURE DISHES
+       ============================================================ -->
+  <section class="section-pad section-alt" id="signature">
+    <div class="container">
+      <div class="section-heading text-center mb-5 reveal">
+        <span class="eyebrow">Signature Selection</span>
+        <h2>Signature Dishes</h2>
+        <p>Our most coveted plates — golden prices, star-rated flavor, and ingredients worth talking about.</p>
+        <div class="accent-underline"></div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Dish 1 -->
+        <div class="col-md-6 col-lg-4 reveal">
+          <article class="dark-card food-card">
+            <img src="images/dish1.jpg" class="food-img" alt="Special Chicken Biryani">
+            <div class="food-body">
+              <div class="food-top">
+                <span class="food-cat">Main Course</span>
+                <span class="stars" aria-label="Rated 4.9 out of 5">★★★★★</span>
+              </div>
+              <h5>Special Chicken Biryani</h5>
+              <p class="food-desc">Fragrant basmati rice slow-cooked with tender chicken and saffron-infused secret spices.</p>
+              <div class="ingredient-tags">
+                <span>Basmati Rice</span><span>Saffron</span><span>Chicken</span>
+              </div>
+              <div class="food-foot">
+                <span class="food-price">$12.99 <small>/ plate</small></span>
+                <button type="button" class="btn-add" data-add-to-cart="Special Chicken Biryani" data-price="12.99">
+                  <i class="bi bi-bag-plus"></i> Order Now
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Dish 2 -->
+        <div class="col-md-6 col-lg-4 reveal">
+          <article class="dark-card food-card">
+            <img src="images/dish2.jpg" class="food-img" alt="Classic Cheese Pizza">
+            <div class="food-body">
+              <div class="food-top">
+                <span class="food-cat">Main Course</span>
+                <span class="stars" aria-label="Rated 4.8 out of 5">★★★★☆</span>
+              </div>
+              <h5>Classic Cheese Pizza</h5>
+              <p class="food-desc">Premium mozzarella over our signature tomato sauce on a fire-baked golden crust.</p>
+              <div class="ingredient-tags">
+                <span>Mozzarella</span><span>Tomato</span><span>Oregano</span>
+              </div>
+              <div class="food-foot">
+                <span class="food-price">$10.99 <small>/ plate</small></span>
+                <button type="button" class="btn-add" data-add-to-cart="Classic Cheese Pizza" data-price="10.99">
+                  <i class="bi bi-bag-plus"></i> Order Now
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Dish 3 -->
+        <div class="col-md-6 col-lg-4 reveal">
+          <article class="dark-card food-card">
+            <img src="images/dish3.jpg" class="food-img" alt="Seekh Kebab Platter">
+            <div class="food-body">
+              <div class="food-top">
+                <span class="food-cat">Starters</span>
+                <span class="stars" aria-label="Rated 4.7 out of 5">★★★★☆</span>
+              </div>
+              <h5>Seekh Kebab Platter</h5>
+              <p class="food-desc">Juicy spiced minced meat grilled over charcoal, served with mint chutney.</p>
+              <div class="ingredient-tags">
+                <span>Minced Lamb</span><span>Charcoal</span><span>Mint Chutney</span>
+              </div>
+              <div class="food-foot">
+                <span class="food-price">$9.50 <small>/ platter</small></span>
+                <button type="button" class="btn-add" data-add-to-cart="Seekh Kebab Platter" data-price="9.50">
+                  <i class="bi bi-bag-plus"></i> Order Now
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="text-center mt-5 reveal">
+        <a href="menu.html" class="btn btn-brand">View Full Menu <i class="bi bi-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MASTER CHEFS
+       ============================================================ -->
+  <section class="section-pad" id="chefs">
+    <div class="container">
+      <div class="section-heading text-center mb-5 reveal">
+        <span class="eyebrow">The Artisans</span>
+        <h2>Meet Our Master Chefs</h2>
+        <p>The culinary artists behind every golden, unforgettable plate at Master Chef.</p>
+        <div class="accent-underline"></div>
+      </div>
+
+      <div class="row g-4 chefs-grid">
+        <!-- Chef 1 -->
+        <div class="col-md-6 col-lg-4 reveal">
+          <article class="chef-card">
+            <div class="chef-avatar">
+              <img src="images/chef1.svg" alt="Chef Tariq Mahmood">
+            </div>
+            <span class="chef-tag">Head Chef</span>
+            <div class="chef-body">
+              <h3 class="chef-name"><span>Chef</span> Tariq Mahmood</h3>
+              <span class="chef-signature">Fire, balance &amp; a golden touch on every plate.</span>
+              <div class="chef-social">
+                <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Chef 2 -->
+        <div class="col-md-6 col-lg-4 reveal">
+          <article class="chef-card">
+            <div class="chef-avatar">
+              <img src="images/chef2.svg" alt="Chef Ayesha Khan">
+            </div>
+            <span class="chef-tag">Pastry Specialist</span>
+            <div class="chef-body">
+              <h3 class="chef-name"><span>Chef</span> Ayesha Khan</h3>
+              <span class="chef-signature">Desserts should whisper sweet secrets to the soul.</span>
+              <div class="chef-social">
+                <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Chef 3 -->
+        <div class="col-md-6 col-lg-4 reveal">
+          <article class="chef-card">
+            <div class="chef-avatar">
+              <img src="images/chef3.svg" alt="Chef Bilal Ahmed">
+            </div>
+            <span class="chef-tag">Grill Master</span>
+            <div class="chef-body">
+              <h3 class="chef-name"><span>Chef</span> Bilal Ahmed</h3>
+              <span class="chef-signature">Smoke, spice &amp; patience — that is true flame mastery.</span>
+              <div class="chef-social">
+                <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TESTIMONIALS
+       ============================================================ -->
+  <section class="section-pad section-alt" id="reviews">
+    <div class="container">
+      <div class="section-heading text-center mb-5 reveal">
+        <span class="eyebrow">Golden Words</span>
+        <h2>What Our Guests Say</h2>
+        <p>Real reviews from food lovers who keep returning to the Master Chef table.</p>
+        <div class="accent-underline"></div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Review 1 -->
+        <div class="col-md-6 col-lg-4 reveal">
+          <article class="dark-card testimonial-card">
+            <div class="quote-mark">&ldquo;</div>
+            <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
+            <p class="testimonial-text">
+              Absolutely the best biryani in the city! The flavors remind me of home, the plating is art,
+              and the service is truly five-star. A must-visit for every food lover.
+            </p>
+            <div class="testimonial-user">
+              <img src="images/avatar1.svg" alt="Amina Malik">
+              <div>
+                <p class="user-name">Amina Malik</p>
+                <p class="user-role">Food Blogger</p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="col-md-6 col-lg-4 reveal">
+          <article class="dark-card testimonial-card">
+            <div class="quote-mark">&ldquo;</div>
+            <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
+            <p class="testimonial-text">
+              Booked a table for our anniversary — pure magic. The chef's custom dessert and candle-lit
+              ambience made it unforgettable.
+            </p>
+            <div class="testimonial-user">
+              <img src="images/avatar2.svg" alt="Hassan Ali">
+              <div>
+                <p class="user-name">Hassan Ali</p>
+                <p class="user-role">Regular Guest</p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="col-md-6 col-lg-4 reveal">
+          <article class="dark-card testimonial-card">
+            <div class="quote-mark">&ldquo;</div>
+            <span class="stars" aria-label="4.5 out of 5 stars">★★★★☆</span>
+            <p class="testimonial-text">
+              The kebab platter is out of this world — smoky, juicy, perfectly spiced. Impeccable
+              presentation and warm hospitality.
+            </p>
+            <div class="testimonial-user">
+              <img src="images/avatar3.svg" alt="Zainab Noor">
+              <div>
+                <p class="user-name">Zainab Noor</p>
+                <p class="user-role">Verified Guest</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SPECIAL OFFER STRIP
+       ============================================================ -->
+  <section class="section-pad pt-0">
+    <div class="container">
+      <div class="offer-banner reveal">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <div class="offer-badge">20% OFF</div>
+            <h3>Your First Online Order</h3>
+            <p>Use code <strong>CHEF20</strong> at checkout — a golden welcome from our kitchen to your table.</p>
+            <a href="menu.html" class="btn btn-brand"><i class="bi bi-bag-heart"></i> Order Now</a>
+          </div>
+          <div class="col-lg-4 d-none d-lg-block text-center">
+            <i class="bi bi-award" style="font-size: 9rem; color: rgba(212,175,55,0.1);"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       LUXURY FOOTER
+       ============================================================ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Brand -->
+        <div class="col-md-6 col-lg-4">
+          <div class="footer-brand">Master <span>Chef</span></div>
+          <p>A high-end fine-dining destination — authentic recipes, master chefs and golden hospitality, crafted for the connoisseur.</p>
+          <div class="social-links mt-3">
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick links -->
+        <div class="col-md-6 col-lg-2">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="index.html#gallery">Gallery</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="reservation.html">Reservation</a></li>
+          </ul>
+        </div>
+
+        <!-- Hours -->
+        <div class="col-md-6 col-lg-3">
+          <h5>Opening Hours</h5>
+          <ul>
+            <li>Mon – Fri: 10:00 AM – 11:00 PM</li>
+            <li>Saturday: 9:00 AM – 12:00 AM</li>
+            <li>Sunday: 9:00 AM – 11:00 PM</li>
+            <li class="mt-2"><i class="bi bi-truck"></i> Delivery: 24/7</li>
+          </ul>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="col-md-6 col-lg-3">
+          <h5>Newsletter</h5>
+          <p>Subscribe for exclusive offers &amp; new dishes.</p>
+          <form class="newsletter-box">
+            <input type="email" placeholder="Your email" required aria-label="Email address">
+            <button type="submit" aria-label="Subscribe"><i class="bi bi-send"></i></button>
+          </form>
+          <p class="mt-2" id="newsletterNote" style="display:none; color: var(--gold); font-weight:600;"></p>
+          <ul class="footer-contact mt-3">
+            <li><i class="bi bi-geo-alt"></i><span>123 Gourmet Street, Food City</span></li>
+            <li><i class="bi bi-telephone"></i><span>+1 (555) 123-4567</span></li>
+            <li><i class="bi bi-envelope"></i><span>info@masterchef.com</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom text-center">
+        &copy; 2026 <a href="index.html">Master Chef</a> — Luxury Fine Dining. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image preview">
+    <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+    <img id="lightboxImg" src="" alt="Gallery preview">
+    <p class="lightbox-title" id="lightboxTitle"></p>
+  </div>
+
+  <!-- Back-to-top + cart toast -->
+  <a href="#" class="back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></a>
+  <div class="cart-toast" id="cartToast"></div>
+
+  <!-- Cart drawer -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+    <div class="cart-drawer-header">
+      <h5><i class="bi bi-bag"></i> Your Order</h5>
+      <button type="button" class="cart-close" id="cartClose" aria-label="Close cart"><i class="bi bi-x-lg"></i></button>
+    </div>
+    <div class="cart-drawer-items" id="cartItems"></div>
+    <div class="cart-drawer-footer">
+      <div class="cart-total-row">
+        <span>Subtotal</span>
+        <span class="cart-total" id="cartTotal">$0.00</span>
+      </div>
+      <button type="button" class="btn btn-brand w-100" id="cartCheckout"><i class="bi bi-bag-check"></i> Proceed to Checkout</button>
+      <button type="button" class="btn btn-ghost w-100 mt-2" id="cartClearAll"><i class="bi bi-trash"></i> Clear Cart</button>
+    </div>
+  </aside>
+
+  <!-- Bootstrap JS bundle + custom scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

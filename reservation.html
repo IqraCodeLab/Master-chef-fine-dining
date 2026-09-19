@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Book a table at Master Chef — choose your date, time and seating area.">
+  <title>Master Chef | Table Reservation</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- ============================================================
+       NAVIGATION BAR (shared)
+       ============================================================ -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-master sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/logo.png" alt="Master Chef Logo">
+        <span class="brand-text">
+          <span class="brand-name">Master <span>Chef</span></span>
+          <span class="brand-tag">Delicious Food</span>
+        </span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link active" href="reservation.html">Reservation</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button type="button" class="icon-btn" id="searchToggle" aria-label="Search">
+            <i class="bi bi-search"></i>
+          </button>
+          <a href="menu.html" class="icon-btn" aria-label="Cart">
+            <i class="bi bi-cart3"></i>
+            <span class="cart-badge" id="cartCount" style="display:none;">0</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Slide-down search bar -->
+  <div class="navbar-search" id="navbarSearch">
+    <div class="container">
+      <form class="row g-2" role="search">
+        <div class="col-10 col-sm-11">
+          <input type="search" class="form-control" placeholder="Search dishes, e.g. Biryani, Pizza..." aria-label="Search dishes">
+        </div>
+        <div class="col-2 col-sm-1">
+          <button type="submit" class="btn btn-brand w-100" aria-label="Search"><i class="bi bi-search"></i></button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       PAGE HERO
+       ============================================================ -->
+  <header class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Reserve Your Seat</span>
+      <h1>Book a Table</h1>
+      <p>Reserve your spot in seconds — pick a date, time and seating area. We'll take care of the rest.</p>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       RESERVATION FORM + LIVE SUMMARY
+       ============================================================ -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="row g-4 justify-content-center">
+
+        <!-- Booking form -->
+        <div class="col-lg-7 reveal">
+          <div class="reserve-card">
+            <h3 class="mb-4">Reservation Details</h3>
+            <form id="reservationForm" novalidate>
+              <div class="row g-3">
+                <!-- Date -->
+                <div class="col-md-6">
+                  <label class="form-label" for="resDate">Date <span>*</span></label>
+                  <input type="date" class="form-control" id="resDate" required>
+                  <div class="invalid-feedback">Please choose a valid date.</div>
+                </div>
+                <!-- Time slot -->
+                <div class="col-md-6">
+                  <label class="form-label" for="resTime">Time Slot <span>*</span></label>
+                  <select class="form-select" id="resTime" required>
+                    <option value="" selected disabled>Select time</option>
+                    <option>11:00 AM</option>
+                    <option>12:00 PM</option>
+                    <option>1:00 PM</option>
+                    <option>2:00 PM</option>
+                    <option>6:00 PM</option>
+                    <option>7:00 PM</option>
+                    <option>8:00 PM</option>
+                    <option>9:00 PM</option>
+                    <option>10:00 PM</option>
+                  </select>
+                  <div class="invalid-feedback">Please select a time slot.</div>
+                </div>
+                <!-- Guest count -->
+                <div class="col-md-6">
+                  <label class="form-label" for="resGuests">Number of Guests <span>*</span></label>
+                  <input type="number" class="form-control" id="resGuests" min="1" max="20" placeholder="e.g. 4" required>
+                  <div class="invalid-feedback">Please enter between 1 and 20 guests.</div>
+                </div>
+                <!-- Seating area -->
+                <div class="col-md-6">
+                  <label class="form-label" for="resSeating">Seating Area <span>*</span></label>
+                  <select class="form-select" id="resSeating" required>
+                    <option value="" selected disabled>Select area</option>
+                    <option>Indoor</option>
+                    <option>Outdoor</option>
+                    <option>VIP Lounge</option>
+                  </select>
+                  <div class="invalid-feedback">Please select a seating area.</div>
+                </div>
+                <!-- Special requests -->
+                <div class="col-12">
+                  <label class="form-label" for="resRequests">Special Requests</label>
+                  <textarea class="form-control" id="resRequests" rows="4" placeholder="Birthday cake, window seat, dietary needs..."></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-brand w-100 btn-lg"><i class="bi bi-calendar-check"></i> Confirm Reservation</button>
+                </div>
+              </div>
+              <div class="form-feedback" role="status"></div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Live booking summary -->
+        <div class="col-lg-5 reveal">
+          <div class="contact-info-card booking-summary">
+            <h3 class="mb-3">Booking Summary</h3>
+            <p style="font-size:0.88rem;">Updates live as you fill the form.</p>
+
+            <div class="summary-row">
+              <span class="k">Date</span>
+              <span class="v" id="sumDate">Not selected</span>
+            </div>
+            <div class="summary-row">
+              <span class="k">Time Slot</span>
+              <span class="v" id="sumTime">Not selected</span>
+            </div>
+            <div class="summary-row">
+              <span class="k">Guests</span>
+              <span class="v" id="sumGuests">Not selected</span>
+            </div>
+            <div class="summary-row">
+              <span class="k">Seating Area</span>
+              <span class="v" id="sumSeating">Not selected</span>
+            </div>
+            <div class="summary-row">
+              <span class="k">Special Requests</span>
+              <span class="v" id="sumRequests">—</span>
+            </div>
+
+            <div class="mt-4 p-3 rounded-3" style="background: rgba(255,255,255,0.05); border: 1px dashed rgba(212,175,55,0.35); font-size: 0.86rem; color: var(--text-muted);">
+              <i class="bi bi-info-circle-fill me-2" style="color: var(--gold);"></i>
+              A confirmation email will be sent once your table is reserved. Free cancellation up to 2 hours before your slot.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER (shared)
+       ============================================================ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="footer-brand">Master <span>Chef</span></div>
+          <p>Delicious Food — authentic recipes, master chefs and warm hospitality. Your table is always ready for you.</p>
+          <div class="social-links mt-3">
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-2">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="reservation.html">Reservation</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <h5>Opening Hours</h5>
+          <ul>
+            <li>Mon – Fri: 10:00 AM – 11:00 PM</li>
+            <li>Saturday: 9:00 AM – 12:00 AM</li>
+            <li>Sunday: 9:00 AM – 11:00 PM</li>
+            <li class="mt-2"><i class="bi bi-truck"></i> Delivery: 24/7</li>
+          </ul>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <h5>Newsletter</h5>
+          <p>Subscribe for exclusive offers &amp; new dishes.</p>
+          <form class="newsletter-box">
+            <input type="email" placeholder="Your email" required aria-label="Email address">
+            <button type="submit" aria-label="Subscribe"><i class="bi bi-send"></i></button>
+          </form>
+          <p class="mt-2" id="newsletterNote" style="display:none; color: var(--gold); font-weight:600;"></p>
+          <ul class="footer-contact mt-3">
+            <li><i class="bi bi-geo-alt"></i><span>123 Gourmet Street, Food City</span></li>
+            <li><i class="bi bi-telephone"></i><span>+1 (555) 123-4567</span></li>
+            <li><i class="bi bi-envelope"></i><span>info@masterchef.com</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom text-center">
+        &copy; 2026 <a href="index.html">Master Chef</a> — Delicious Food. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back-to-top + cart toast -->
+  <a href="#" class="back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></a>
+  <div class="cart-toast" id="cartToast"></div>
+
+  <!-- Cart drawer -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+    <div class="cart-drawer-header">
+      <h5><i class="bi bi-bag"></i> Your Order</h5>
+      <button type="button" class="cart-close" id="cartClose" aria-label="Close cart"><i class="bi bi-x-lg"></i></button>
+    </div>
+    <div class="cart-drawer-items" id="cartItems"></div>
+    <div class="cart-drawer-footer">
+      <div class="cart-total-row">
+        <span>Subtotal</span>
+        <span class="cart-total" id="cartTotal">$0.00</span>
+      </div>
+      <button type="button" class="btn btn-brand w-100" id="cartCheckout"><i class="bi bi-bag-check"></i> Proceed to Checkout</button>
+      <button type="button" class="btn btn-ghost w-100 mt-2" id="cartClearAll"><i class="bi bi-trash"></i> Clear Cart</button>
+    </div>
+  </aside>
+
+  <!-- Bootstrap JS bundle + custom scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

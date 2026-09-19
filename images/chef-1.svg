@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" role="img" aria-label="Chef portrait placeholder">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2b3348"/>
+      <stop offset="1" stop-color="#151a26"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="700" fill="url(#bg)"/>
+  <circle cx="300" cy="240" r="230" fill="#e67e22" opacity="0.08"/>
+  <!-- Chef hat -->
+  <rect x="228" y="80" width="144" height="40" rx="10" fill="#ffffff"/>
+  <ellipse cx="300" cy="82" rx="86" ry="42" fill="#ffffff"/>
+  <!-- Head -->
+  <circle cx="300" cy="250" r="92" fill="#e8b48c"/>
+  <!-- Shoulders -->
+  <path d="M90 700 Q 120 470 300 470 Q 480 470 510 700 Z" fill="#ffffff" opacity="0.12"/>
+  <path d="M170 700 Q 190 540 300 540 Q 410 540 430 700 Z" fill="#ffffff" opacity="0.22"/>
+</svg>
