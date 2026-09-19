@@ -1,10 +1,22 @@
 # Master Chef — Luxury Fine Dining
 
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Bootstrap 5](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![No Dependencies](https://img.shields.io/badge/Zero%20Dependencies-green?style=for-the-badge)
+
 A high-end, fully responsive multi-page restaurant website with a cinematic luxury dark theme. Built with pure **HTML5**, **CSS3**, **Bootstrap 5**, and vanilla **JavaScript** — no frameworks, no build steps, zero dependencies.
 
-> [Live Demo](https://your-domain.example) &nbsp;·&nbsp; [Gallery Screenshot](Screenshots/bb.png) &nbsp;·&nbsp; [Banner Screenshot](Screenshots/banner.png)
+<div align="center">
 
-![Master Chef Website Preview](Screenshots/bb.png)
+![Master Chef — Luxury Fine Dining](Screenshots/banner.png)
+
+<br>
+
+**Open a page → it just works.** No install, no server, no build step.
+
+</div>
 
 ---
 
@@ -17,7 +29,7 @@ A high-end, fully responsive multi-page restaurant website with a cinematic luxu
 - [Project Structure](#project-structure)
 - [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
-- [Screenshots](#screenshots)
+- [Screenshot](#screenshot)
 - [Customization Guide](#customization-guide)
 - [Our Team](#our-team)
 - [License](#license)
@@ -94,8 +106,7 @@ food_website/
 ├── videos/
 │   └── food.mp4          # Food video — plays full-width on the home page
 ├── Screenshots/
-│   ├── bb.png            # Full-page preview
-│   └── banner.png        # Banner preview
+│   └── banner.png        # Single hero screenshot used in this README
 └── images/               # All local assets
     ├── logo.png          # Navbar / footer logo
     ├── hero-bg.jpg       # Hero background
@@ -103,7 +114,7 @@ food_website/
     ├── gallery-1.jpg … gallery-8.jpg
     ├── chef1.svg, chef2.svg, chef3.svg
     ├── avatar1.svg, avatar2.svg, avatar3.svg
-    └── drinks & desserts… (lassi, dessert-cake, gulab-jamun, etc.)
+    └── drinks & desserts… (biryani, burger, pizza, kheer, gulab-jamun, etc.)
 ```
 
 ---
@@ -135,15 +146,11 @@ That's it — no install, no server, no build step required.
 
 ---
 
-## Screenshots
+## Screenshot
 
 **Home — cinematic hero & luxury navbar**
 
-![Banner preview](Screenshots/banner.png)
-
-**Full-page preview**
-
-![Full website preview](Screenshots/bb.png)
+![Master Chef home page — hero, navbar and signature dark-gold theme](Screenshots/banner.png)
 
 ---
 
